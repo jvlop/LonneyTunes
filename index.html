@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antonella - 11 anos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="camera-container">
+        <!-- Câmera (vídeo preenchendo toda a tela) -->
+        <video id="camera" autoplay playsinline></video>
+
+        <!-- Moldura PNG sobreposta -->
+        <img id="overlay" src="imagens/moldura_traseira.png" alt="Moldura Traseira" class="overlay">
+        <img id="front-overlay" src="imagens/moldura_frontal.png" alt="Moldura Frontal" class="overlay" style="display: none;">
+
+        <!-- Preview da câmera -->
+        <img id="preview" style="width: 100%; height: auto;">
+
+        <!-- Controles -->
+        <div class="bottom-controls">
+            <button id="flip-camera"><img src="imagens/trocar.svg" alt="Trocar Câmera"></button>
+            <button id="capture-btn"><img src="imagens/capturar.svg" alt="Capturar Foto"></button>
+        </div>
+
+        <!-- Foto tirada -->
+        <div id="photo-container" class="hidden">
+            <img id="captured-photo" src="" alt="Foto Capturada">
+            <button id="save-btn">Salvar Foto</button>
+            <button id="retake-btn">Tirar Outra Foto</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
